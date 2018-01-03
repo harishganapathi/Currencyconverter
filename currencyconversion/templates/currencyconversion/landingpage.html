@@ -1,15 +1,26 @@
 {% extends 'currencyconversion/index.html' %}
  {% block content %}
 
-<h2>
 
 
-
-    Content goes here
-
-    {{ prices }}
-
-
-</h2>
+<form method="post" action="landingpage/">
+    <table>
+        <tr>
+            <td>FC</td>
+            <td>
+                <input type="text" name="fc" />
+            </td>
+        </tr>
+        <tr>
+            <td>TC</td>
+            <td>
+                <input type="text" name="tc" />
+            </td>
+        </tr>
+            <td>
+                <button>Submit Form</button>
+            </td>
+        </tr>
+    </table>
 
 {% endblock %}
