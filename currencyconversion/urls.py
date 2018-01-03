@@ -8,6 +8,7 @@ urlpatterns = [
     url(r'^.*signin$', views.signin, name='signin'),
     url(r'^.*signout/$', views.signout, name="signout"),
     url(r'^.*landingpage/$', views.landingpage, name="landingpage"),
+    #url(r'^.*landingpage/landingpage$', views.filenotfound, name="filenotfound"),
     #url(r'^.*conversion/$', views.conversion, name="conversion"),
     #url(r'')
 ]

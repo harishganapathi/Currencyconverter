@@ -1,17 +1,11 @@
 {% extends 'currencyconversion/index.html' %} 
 {% block content %}
-<h1>
-    Current Price of 
-</h1>
-
-{{ tc }}
-
-to 
-
-{{ fc }}
-is 
-
-{{ price }}
+<div class="alert alert-info">
+    <strong>Current Price </strong> 
+    <h1>
+       Price of {{ fc }} to {{ tc }} is {{ price }}
+    </h1>
+</div>
 
 
 {% endblock %}

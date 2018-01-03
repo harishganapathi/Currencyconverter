@@ -1,26 +1,53 @@
 {% extends 'currencyconversion/index.html' %}
+                     {% if user.is_authenticated %}
  {% block content %}
 
+<strong>
+    Country codes
+</strong><br>
+<br>
 
-
+    <tbody>
+    {% for country in countries %}
+            
+        <td><tr>
+            {{ country }}</tr>
+        </td>
+        
+    </tbody>
+        
+    {% endfor %}
 <form method="post" action="landingpage/">
     <table>
         <tr>
-            <td>FC</td>
+            <td>Currency 1 </td>
             <td>
-                <input type="text" name="fc" />
+                <input type="text" class= "form-control" name="fc" /><br>
             </td>
         </tr>
         <tr>
-            <td>TC</td>
             <td>
-                <input type="text" name="tc" />
+                
+            </td>
+            <td>
+                To
             </td>
         </tr>
+        <tr>
+            <td>Currency 2 </td>
             <td>
-                <button>Submit Form</button>
+                <input type="text" class= "form-control" name="tc" /><br>
+            </td>
+            <br>
+        </tr>
+            <td>
+                <button class = "btn btn-info">Submit Form</button>
             </td>
         </tr>
-    </table>
 
+    </table>
+    <h5>
+        Please enter the desired country code for conversion
+    </h5>
 {% endblock %}
+{% endif %}
